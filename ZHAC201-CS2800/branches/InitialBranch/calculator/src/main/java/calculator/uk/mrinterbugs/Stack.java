@@ -24,14 +24,13 @@ public class Stack {
    * This method can be called to get the value at the top of the stack.
    * 
    * @return The Entry at the top of the stack.
+   * @throws EmptyStack The empty stack exception is thrown if no item in the stack is found.
    */
-  public Entry pop() {
-    try {
-      size = size - 1;
-      return stack[size];
-    } catch (ArrayIndexOutOfBoundsException e) {
-      System.out.println("The stack is empty");
-      return null;
+  public Entry pop() throws EmptyStack {
+    if (this.size == 0) {
+      throw new EmptyStack("The stack is empty");
+    } else {
+      return stack[--size];
     }
   }
 
@@ -41,22 +40,20 @@ public class Stack {
    * @param i The Entry that needs to be stored in the stack.
    */
   public void push(Entry i) {
-    stack[size] = i;
-    size = size + 1;
+    stack[size++] = i;
   }
 
   /**
    * Returns and keeps the newest entry.
    * 
    * @return The newest Entry to be added.
+   * @throws EmptyStack The empty stack exception is thrown if no item in the stack is found.
    */
-  public Entry top() {
-    try {
+  public Entry top() throws EmptyStack {
+    if (this.size == 0) {
+      throw new EmptyStack("The stack is empty");
+    } else {
       return stack[size - 1];
-    } catch (ArrayIndexOutOfBoundsException e) {
-      System.out.println("The stack is empty");
-      return null;
     }
   }
-
 }

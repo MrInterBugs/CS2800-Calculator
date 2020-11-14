@@ -13,19 +13,6 @@ class testStack {
     stack = new Stack();
   }
 
-  // No longer passable.
-  @Test
-  void createSize() {
-    assertEquals(stack.getSize(), 0, "Tests the size of the stack");
-  }
-
-  // No longer passable.
-  @Test
-  void createListandReturn() {
-    assertEquals(stack.pop(), null,
-        "Used to make the pop method and the array that is used to populate it.");
-  }
-
   @Test
   // Adds a push methods which can be used to add items to the newly created array.
   void addItemsToStack() {
@@ -41,7 +28,7 @@ class testStack {
   }
 
   @Test
-  void getMultipleItemsFromStack() {
+  void getMultipleItemsFromStack() throws EmptyStack {
     Float number = (float) 1.0;
     Entry entry = new Entry(number);
     stack.push(entry);
@@ -57,7 +44,7 @@ class testStack {
   }
 
   @Test
-  void addTop() {
+  void addTop() throws EmptyStack {
     Float number = (float) 1.0;
     Entry entry = new Entry(number);
     stack.push(entry);
@@ -73,11 +60,4 @@ class testStack {
     stack.pop();
     assertEquals(stack.top().getNumber(), (float) 1.0, "Check top outputs the correct int after maninulating the stack.");
   }
-
-  @Test
-  void addException() {
-    assertEquals(stack.top(), null, "Checks that the method returns null if the stack is empty.");
-    assertEquals(stack.pop(), null, "Checks that the method returns null if the stack is empty.");
-  }
-
 }
