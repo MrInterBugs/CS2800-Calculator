@@ -9,7 +9,7 @@ package calculator.uk.mrinterbugs;
 public class Stack {
 
   private int size;
-  private int[] stack = new int[1000];
+  private Entry[] stack = new Entry[1000];
 
   /**
    * Used to get the size of the full stack.
@@ -23,9 +23,9 @@ public class Stack {
   /**
    * This method can be called to get the value at the top of the stack.
    * 
-   * @return The int at the top of the stack.
+   * @return The Entry at the top of the stack.
    */
-  public Integer pop() {
+  public Entry pop() {
     try {
       size = size - 1;
       return stack[size];
@@ -38,9 +38,9 @@ public class Stack {
   /**
    * This method is used to store a new value at the top of the stack.
    * 
-   * @param i The int that needs to be stored in the stack.
+   * @param i The Entry that needs to be stored in the stack.
    */
-  public void push(int i) {
+  public void push(Entry i) {
     stack[size] = i;
     size = size + 1;
   }
@@ -48,9 +48,9 @@ public class Stack {
   /**
    * Returns and keeps the newest entry.
    * 
-   * @return The newest int to be added.
+   * @return The newest Entry to be added.
    */
-  public Integer top() {
+  public Entry top() {
     try {
       return stack[size - 1];
     } catch (ArrayIndexOutOfBoundsException e) {

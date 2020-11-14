@@ -29,31 +29,49 @@ class testStack {
   @Test
   // Adds a push methods which can be used to add items to the newly created array.
   void addItemsToStack() {
-    stack.push(7);
-    stack.push(15);
-    stack.push(0);
+    Float number = (float) 1.0;
+    Entry entry = new Entry(number);
+    stack.push(entry);
+    number = (float) 7.3;
+    entry = new Entry(number);
+    stack.push(entry);
+    number = (float) 13.1;
+    entry = new Entry(number);
+    stack.push(entry);
   }
 
   @Test
   void getMultipleItemsFromStack() {
-    stack.push(7);
-    stack.push(15);
-    stack.push(0);
-    assertEquals(stack.pop(), 0, "Checks both push and pop are working correctly.");
-    assertEquals(stack.pop(), 15, "Checks both push and pop are working correctly.");
-    assertEquals(stack.pop(), 7, "Checks both push and pop are working correctly.");
+    Float number = (float) 1.0;
+    Entry entry = new Entry(number);
+    stack.push(entry);
+    number = (float) 7.3;
+    entry = new Entry(number);
+    stack.push(entry);
+    number = (float) 13.1;
+    entry = new Entry(number);
+    stack.push(entry);
+    assertEquals(stack.pop().getNumber(), (float) 13.1, "Checks both push and pop are working correctly.");
+    assertEquals(stack.pop().getNumber(), (float) 7.3, "Checks both push and pop are working correctly.");
+    assertEquals(stack.pop().getNumber(), (float) 1.0, "Checks both push and pop are working correctly.");
   }
 
   @Test
   void addTop() {
-    stack.push(5);
-    stack.push(7);
-    stack.push(10);
-    assertEquals(stack.top(), 10,
+    Float number = (float) 1.0;
+    Entry entry = new Entry(number);
+    stack.push(entry);
+    number = (float) 7.3;
+    entry = new Entry(number);
+    stack.push(entry);
+    number = (float) 13.1;
+    entry = new Entry(number);
+    stack.push(entry);
+    assertEquals(stack.top().getNumber(), (float) 13.1,
         "creates and checks the top method to return the last added item.");
     stack.pop();
     stack.pop();
-    assertEquals(stack.top(), 5, "Check top outputs the correct int after maninulating the stack.");
+    assertEquals(stack.top().getNumber(), (float) 1.0, "Check top outputs the correct int after maninulating the stack.");
   }
 
   @Test
