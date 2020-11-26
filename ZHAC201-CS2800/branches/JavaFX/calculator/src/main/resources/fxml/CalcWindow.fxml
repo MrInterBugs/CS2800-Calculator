@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="234.0" prefWidth="492.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#aboutProgram" text="About MyCalculator" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" VBox.vgrow="ALWAYS">
+      <children>
+            <Button layoutX="215.0" layoutY="142.0" mnemonicParsing="false" onAction="#getInput" text="Calculate" />
+            <TextArea layoutX="147.0" layoutY="88.0" prefHeight="32.0" prefWidth="200.0" promptText="Enter calculation here:" />
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
