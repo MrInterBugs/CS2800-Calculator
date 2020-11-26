@@ -62,12 +62,12 @@ public class Entry {
   }
 
   /**
-   * Returns the string currently stored in the entry.
+   * Returns the symbol currently stored in the entry.
    * 
    * @return The stored symbol.
    */
-  public String getOther() {
-    return this.other.getSymbol();
+  public Symbol getOther() {
+    return this.other;
   }
 
   /**

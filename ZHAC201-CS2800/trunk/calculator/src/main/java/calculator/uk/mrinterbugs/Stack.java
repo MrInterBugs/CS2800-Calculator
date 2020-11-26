@@ -9,7 +9,7 @@ package calculator.uk.mrinterbugs;
 public class Stack {
 
   private int size;
-  private int[] stack = new int[1000];
+  private Entry[] stack = new Entry[1000];
 
   /**
    * Used to get the size of the full stack.
@@ -23,40 +23,37 @@ public class Stack {
   /**
    * This method can be called to get the value at the top of the stack.
    * 
-   * @return The int at the top of the stack.
+   * @return The Entry at the top of the stack.
+   * @throws EmptyStack The empty stack exception is thrown if no item in the stack is found.
    */
-  public Integer pop() {
-    try {
-      size = size - 1;
-      return stack[size];
-    } catch (ArrayIndexOutOfBoundsException e) {
-      System.out.println("The stack is empty");
-      return null;
+  public Entry pop() throws EmptyStack {
+    if (this.size == 0) {
+      throw new EmptyStack("The stack is empty");
+    } else {
+      return stack[--size];
     }
   }
 
   /**
    * This method is used to store a new value at the top of the stack.
    * 
-   * @param i The int that needs to be stored in the stack.
+   * @param i The Entry that needs to be stored in the stack.
    */
-  public void push(int i) {
-    stack[size] = i;
-    size = size + 1;
+  public void push(Entry i) {
+    stack[size++] = i;
   }
 
   /**
    * Returns and keeps the newest entry.
    * 
-   * @return The newest int to be added.
+   * @return The newest Entry to be added.
+   * @throws EmptyStack The empty stack exception is thrown if no item in the stack is found.
    */
-  public Integer top() {
-    try {
+  public Entry top() throws EmptyStack {
+    if (this.size == 0) {
+      throw new EmptyStack("The stack is empty");
+    } else {
       return stack[size - 1];
-    } catch (ArrayIndexOutOfBoundsException e) {
-      System.out.println("The stack is empty");
-      return null;
     }
   }
-
 }
