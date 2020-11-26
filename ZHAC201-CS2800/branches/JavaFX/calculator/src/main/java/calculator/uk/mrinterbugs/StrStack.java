@@ -1,7 +1,7 @@
 package calculator.uk.mrinterbugs;
 
 /**
- * An extension of the stack class for storing integers.
+ * An extension of the stack class for storing strings.
  * 
  * @author Student
  *
@@ -10,6 +10,7 @@ public class StrStack {
 
 
   private Stack stack;
+
   /**
    * Creates a new stack which can be used.
    */
@@ -33,7 +34,7 @@ public class StrStack {
   /**
    * This method can be called to get the value at the top of the stack.
    * 
-   * @return The Entry at the top of the stack.
+   * @return The string at the top of the stack.
    * @throws EmptyStack The empty stack exception is thrown if no item in the stack is found.
    */
   public String pop() throws EmptyStack {
@@ -47,7 +48,7 @@ public class StrStack {
   /**
    * This method is used to store a new value at the top of the stack.
    * 
-   * @param i The Entry that needs to be stored in the stack.
+   * @param i The string that needs to be stored in the stack.
    */
   public void push(String i) {
     Entry entry = new Entry(i);
