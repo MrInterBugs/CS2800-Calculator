@@ -1,6 +1,6 @@
 package calculator.uk.mrinterbugs;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -38,9 +38,12 @@ class testStack {
     number = (float) 13.1;
     entry = new Entry(number);
     stack.push(entry);
-    assertEquals(stack.pop().getNumber(), (float) 13.1, "Checks both push and pop are working correctly.");
-    assertEquals(stack.pop().getNumber(), (float) 7.3, "Checks both push and pop are working correctly.");
-    assertEquals(stack.pop().getNumber(), (float) 1.0, "Checks both push and pop are working correctly.");
+    assertEquals(stack.pop().getNumber(), (float) 13.1,
+        "Checks both push and pop are working correctly.");
+    assertEquals(stack.pop().getNumber(), (float) 7.3,
+        "Checks both push and pop are working correctly.");
+    assertEquals(stack.pop().getNumber(), (float) 1.0,
+        "Checks both push and pop are working correctly.");
   }
 
   @Test
@@ -58,6 +61,7 @@ class testStack {
         "creates and checks the top method to return the last added item.");
     stack.pop();
     stack.pop();
-    assertEquals(stack.top().getNumber(), (float) 1.0, "Check top outputs the correct int after maninulating the stack.");
+    assertEquals(stack.top().getNumber(), (float) 1.0,
+        "Check top outputs the correct int after maninulating the stack.");
   }
 }

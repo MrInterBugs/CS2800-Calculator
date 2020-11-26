@@ -1,10 +1,10 @@
 package calculator.uk.mrinterbugs;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 
 class testType {
-  private Type type; //Automatically adds this class using eclipse.
+  private Type type; // Automatically adds this class using eclipse.
 
   @Test
   void createEnumClass() {
