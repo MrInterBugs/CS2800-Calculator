@@ -16,7 +16,6 @@ class testEntry {
 
   @Test
   void makeSetters() {
-
     assertEquals(new Entry("3 * 4 - 2").getStr(), "3 * 4 - 2", "");
     Float number = (float) 1.0;
     assertEquals(new Entry(number).getNumber(), 1.0, "");
