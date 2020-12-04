@@ -33,11 +33,12 @@ public class MyController {
     String test = textfield.getText();
     Float result = null;
     try {
-      result = PostfixCalculator.evaluate(test);
+      result = InfixCalculator.evaluate(test);
     } catch (UserInput | EmptyStack e) {
       // TODO Auto-generated catch block
       e.printStackTrace();
     }
+    System.out.println(result);
     textfield.setText(result.toString());
   }
 
