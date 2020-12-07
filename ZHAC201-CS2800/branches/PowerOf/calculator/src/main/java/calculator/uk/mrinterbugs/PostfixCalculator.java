@@ -44,6 +44,9 @@ public class PostfixCalculator implements Calculator {
           case "*":
             numstack.push(arguement2 * arguement1);
             break;
+          case "^":
+            numstack.push((float) Math.pow(arguement2, arguement1));
+            break;
           default:
             break;
         }

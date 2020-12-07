@@ -8,8 +8,8 @@ package calculator.uk.mrinterbugs;
  */
 public enum Symbol {
 
-  PLUS("+"), MINUS("-"), LEFT_BRACKET("("), RIGHT_BRACKET(")"), TIMES("*"), DIVIDE("/"), INVAILD(
-      "!");
+  PLUS("+"), MINUS("-"), LEFT_BRACKET("("), RIGHT_BRACKET(")"), TIMES("*"), DIVIDE("/"), POWER(
+      "^"), INVAILD("!");
 
   /**
    * A private constructor used for creating the enums which can be seen above.

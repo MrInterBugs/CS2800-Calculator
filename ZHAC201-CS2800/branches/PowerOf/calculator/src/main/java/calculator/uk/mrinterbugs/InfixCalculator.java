@@ -3,8 +3,7 @@ package calculator.uk.mrinterbugs;
 import java.util.Scanner;
 
 /**
- * Used to convert inifix to postfix.
- * https://slaystudy.com/infix-to-postfix/
+ * Used to convert inifix to postfix. https://slaystudy.com/infix-to-postfix/
  * 
  * @author Student
  *
@@ -44,6 +43,8 @@ public class InfixCalculator implements Calculator {
           opstack.push(Symbol.DIVIDE);
         } else if (c.equals(Symbol.TIMES.getSymbol())) {
           opstack.push(Symbol.TIMES);
+        } else if (c.equals(Symbol.POWER.getSymbol())) {
+          opstack.push(Symbol.POWER);
         }
       } else if (c.equals(Symbol.RIGHT_BRACKET.getSymbol())) {
         while (opstack.top() != Symbol.LEFT_BRACKET) {
@@ -60,7 +61,8 @@ public class InfixCalculator implements Calculator {
     if (c.equals(Symbol.PLUS.getSymbol()) || c.equals(Symbol.MINUS.getSymbol())) {
       return 1;
     }
-    if (c.equals(Symbol.DIVIDE.getSymbol()) || c.equals(Symbol.TIMES.getSymbol())) {
+    if (c.equals(Symbol.DIVIDE.getSymbol()) || c.equals(Symbol.TIMES.getSymbol())
+        || c.equals(Symbol.POWER.getSymbol())) {
       return 2;
     }
     return 0;
@@ -68,7 +70,8 @@ public class InfixCalculator implements Calculator {
 
   private static boolean isSymbol(String c) {
     if (c.equals(Symbol.PLUS.getSymbol()) || c.equals(Symbol.MINUS.getSymbol())
-        || c.equals(Symbol.DIVIDE.getSymbol()) || c.equals(Symbol.TIMES.getSymbol())) {
+        || c.equals(Symbol.DIVIDE.getSymbol()) || c.equals(Symbol.TIMES.getSymbol())
+        || c.equals(Symbol.POWER.getSymbol())) {
       return true;
     } else {
       return false;

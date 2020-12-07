@@ -9,7 +9,7 @@ public class SuperStarter {
   
   /**
    * Used to start the application.
-   * @param args any arguements to pass.
+   * @param args Any arguments that should be passed in.
    */
   public static void main(String[] args) {
     try {
