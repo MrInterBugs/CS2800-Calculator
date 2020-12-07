@@ -2,7 +2,6 @@ package calculator.uk.mrinterbugs;
 
 // https://github.com/jjenkov/javafx-examples Used to understand how to use JavaFX as i had issues
 // with file locations on windows.
-import java.io.File;
 import java.net.URL;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -46,7 +45,7 @@ public class Starter extends Application {
 
     Scene scene = new Scene(vbox);
     stage.setScene(scene);
-    stage.setTitle("Postfix Calculator");
+    stage.setTitle("Postfix/Infix Calculator");
     stage.show();
   }
 }
