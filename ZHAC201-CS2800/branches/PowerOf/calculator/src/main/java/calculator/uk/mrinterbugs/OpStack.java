@@ -9,7 +9,7 @@ package calculator.uk.mrinterbugs;
 public class OpStack {
 
 
-  private Stack stack;
+  private final Stack stack;
 
   /**
    * Creates a new stack which can be used.
@@ -24,11 +24,7 @@ public class OpStack {
    * @return true if empty or false otherwise.
    */
   public boolean isEmpty() {
-    if (this.stack.getSize() == 0) {
-      return true;
-    } else {
-      return false;
-    }
+    return this.stack.getSize() == 0;
   }
 
   /**

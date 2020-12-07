@@ -24,7 +24,7 @@ public class testOpStack {
   void addItemsToStack() {
     Symbol Symbols = Symbol.PLUS;
     opStack.push(Symbols);
-    Symbols = Symbol.INVAILD;
+    Symbols = Symbol.INVALID;
     opStack.push(Symbols);
     Symbols = Symbol.MINUS;
     opStack.push(Symbols);
@@ -34,12 +34,12 @@ public class testOpStack {
   void getMultipleItemsFromStack() throws EmptyStack {
     Symbol Symbols = Symbol.PLUS;
     opStack.push(Symbols);
-    Symbols = Symbol.INVAILD;
+    Symbols = Symbol.INVALID;
     opStack.push(Symbols);
     Symbols = Symbol.MINUS;
     opStack.push(Symbols);
     assertEquals(opStack.pop(), Symbol.MINUS, "Checks both push and pop are working correctly.");
-    assertEquals(opStack.pop(), Symbol.INVAILD, "Checks both push and pop are working correctly.");
+    assertEquals(opStack.pop(), Symbol.INVALID, "Checks both push and pop are working correctly.");
     assertEquals(opStack.pop(), Symbol.PLUS, "Checks both push and pop are working correctly.");
   }
 }

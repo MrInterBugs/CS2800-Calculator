@@ -7,5 +7,5 @@ package calculator.uk.mrinterbugs;
  *
  */
 public enum Type {
-  NUMBER, INVALID, SYMBOL, STRING;
+  NUMBER, INVALID, SYMBOL, STRING
 }

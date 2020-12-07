@@ -20,7 +20,7 @@ class testSymbol {
         "Automaticlly adds this enum using eclipse.");
     assertEquals("TIMES", Symbol.TIMES.name(), "Automaticlly adds this enum using eclipse.");
     assertEquals("DIVIDE", Symbol.DIVIDE.name(), "Automaticlly adds this enum using eclipse.");
-    assertEquals("INVAILD", Symbol.INVAILD.name(), "Automaticlly adds this enum using eclipse.");
+    assertEquals("INVAILD", Symbol.INVALID.name(), "Automaticlly adds this enum using eclipse.");
   }
 
   @Test
@@ -38,7 +38,7 @@ class testSymbol {
         "Adds the correct symbol to each return method.");
     assertEquals("*", Symbol.TIMES.getSymbol(), "Adds the correct symbol to each return method.");
     assertEquals("/", Symbol.DIVIDE.getSymbol(), "Adds the correct symbol to each return method.");
-    assertEquals("!", Symbol.INVAILD.getSymbol(), "Adds the correct symbol to each return method.");
+    assertEquals("!", Symbol.INVALID.getSymbol(), "Adds the correct symbol to each return method.");
 
   }
 }
