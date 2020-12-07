@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 
 public class testInfixCalculator {
   
+  //Will no longer pass. Has been superseeded by the next test.
   @Test
   void createPostfixFromInfix() throws UserInput, EmptyStack {
     assertEquals(InfixCalculator.evaluate("3 + 2"), "3 2 +", "Tests to see if the we get to posstfix calulation.");
