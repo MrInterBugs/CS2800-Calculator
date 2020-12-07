@@ -38,8 +38,7 @@ public class Starter extends Application {
 
     MyController controller = new MyController();
     loader.setController(controller);
-    File fxmlFile = new File("src/main/resources/fxml/CalcWindow.fxml");
-    URL fxmlUrl = fxmlFile.toURI().toURL();
+    URL fxmlUrl = this.getClass().getResource("/fxml/CalcWindow.fxml");
     loader.setLocation(fxmlUrl);
 
 
