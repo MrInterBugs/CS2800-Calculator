@@ -21,7 +21,7 @@ public class Version {
    */
   public static void display() {
     
-    String version = "0.1.0";
+    String version = "0.5.0";
     
     Stage versionwindow = new Stage();
 

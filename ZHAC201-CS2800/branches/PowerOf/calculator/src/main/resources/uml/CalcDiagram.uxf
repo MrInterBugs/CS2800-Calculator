@@ -190,11 +190,10 @@ we provide a facade to hide details
     </coordinates>
     <panel_attributes>bg=yellow
 _cs2800::StandardCalc_
-Evaluates infix String Expressions
+Converts infix String to postfix strings.
 --
 *Attributes*
 -values: OpStack
--rpCalc: RevPolishCalc
 --
 *Responsibilities*
 +evaluate(String: what): float

@@ -3,7 +3,8 @@ package calculator.uk.mrinterbugs;
 import java.util.Scanner;
 
 /**
- * Used to convert inifix to postfix. https://slaystudy.com/infix-to-postfix/
+ * Used to convert inifix to postfix. 
+ * Based of off this C++ example https://slaystudy.com/infix-to-postfix/
  * 
  * @author Student
  *
