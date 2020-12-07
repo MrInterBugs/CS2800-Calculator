@@ -3,7 +3,7 @@ package calculator.uk.mrinterbugs;
 import java.util.Scanner;
 
 /**
- * Used to convert inifix to postfix. 
+ * Used to convert infix to postfix. 
  * Based of off this C++ example https://slaystudy.com/infix-to-postfix/
  * 
  * @author Student
@@ -12,17 +12,17 @@ import java.util.Scanner;
 public class InfixCalculator implements Calculator {
 
   /**
-   * The evalute method calls postfix to caluclate the infix method.
+   * The evaluate method calls postfix to calculate the infix method.
    * 
-   * @param arguements The question the user has asked.
+   * @param arguments The question the user has asked.
    * @return The answer.
    * @throws UserInput If it is not valid.
    * @throws EmptyStack If the stack is empty.
    */
-  public static float evaluate(String arguements) throws UserInput, EmptyStack {
-    String postfixArguement = "";
-    arguements = "( " + arguements + " )";
-    Scanner scan = new Scanner(arguements);
+  public static float evaluate(String arguments) throws UserInput, EmptyStack {
+    StringBuilder postfixArgument = new StringBuilder();
+    arguments = "( " + arguments + " )";
+    Scanner scan = new Scanner(arguments);
     OpStack opstack = new OpStack();
 
     while (scan.hasNext()) {
@@ -30,11 +30,11 @@ public class InfixCalculator implements Calculator {
       if (c.equals(Symbol.LEFT_BRACKET.getSymbol())) {
         opstack.push(Symbol.LEFT_BRACKET);
       } else if (isInteger(c)) {
-        postfixArguement = postfixArguement + c + " ";
+        postfixArgument.append(c).append(" ");
       } else if (isSymbol(c)) {
         while (isSymbol(opstack.top().getSymbol())
-            && impotance(opstack.top().getSymbol()) >= impotance(c)) {
-          postfixArguement = postfixArguement + opstack.pop().getSymbol() + " ";
+            && importance(opstack.top().getSymbol()) >= importance(c)) {
+          postfixArgument.append(opstack.pop().getSymbol()).append(" ");
         }
         if (c.equals(Symbol.PLUS.getSymbol())) {
           opstack.push(Symbol.PLUS);
@@ -49,16 +49,16 @@ public class InfixCalculator implements Calculator {
         }
       } else if (c.equals(Symbol.RIGHT_BRACKET.getSymbol())) {
         while (opstack.top() != Symbol.LEFT_BRACKET) {
-          postfixArguement = postfixArguement + opstack.pop().getSymbol() + " ";
+          postfixArgument.append(opstack.pop().getSymbol()).append(" ");
         }
         opstack.pop();
       }
     }
     scan.close();
-    return (PostfixCalculator.evaluate(postfixArguement));
+    return (PostfixCalculator.evaluate(postfixArgument.toString()));
   }
 
-  private static int impotance(String c) {
+  private static int importance(String c) {
     if (c.equals(Symbol.PLUS.getSymbol()) || c.equals(Symbol.MINUS.getSymbol())) {
       return 1;
     }
@@ -70,13 +70,9 @@ public class InfixCalculator implements Calculator {
   }
 
   private static boolean isSymbol(String c) {
-    if (c.equals(Symbol.PLUS.getSymbol()) || c.equals(Symbol.MINUS.getSymbol())
-        || c.equals(Symbol.DIVIDE.getSymbol()) || c.equals(Symbol.TIMES.getSymbol())
-        || c.equals(Symbol.POWER.getSymbol())) {
-      return true;
-    } else {
-      return false;
-    }
+    return c.equals(Symbol.PLUS.getSymbol()) || c.equals(Symbol.MINUS.getSymbol())
+            || c.equals(Symbol.DIVIDE.getSymbol()) || c.equals(Symbol.TIMES.getSymbol())
+            || c.equals(Symbol.POWER.getSymbol());
   }
 
   /**
