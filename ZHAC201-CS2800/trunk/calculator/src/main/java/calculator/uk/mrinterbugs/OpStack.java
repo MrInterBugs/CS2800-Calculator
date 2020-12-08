@@ -52,7 +52,17 @@ public class OpStack {
    */
   public void push(Symbol i) {
     Entry entry = new Entry(i);
-    this.stack.push(entry);;
+    this.stack.push(entry);
+  }
+
+  /**
+   * Used to get the value at the top of the stack.
+   * 
+   * @return the top value.
+   * @throws EmptyStack If the stack is empty.
+   */
+  public Symbol top() throws EmptyStack {
+    return stack.top().getOther();
   }
 
 }

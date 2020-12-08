@@ -2,10 +2,10 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>uk.ac.rhul.CS2800</groupId>
+	<groupId>uk.mrinterbugs</groupId>
 	<artifactId>calculator</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>The CS2800 Calculator</name>
+	<version>0.1.0</version>
+	<name>The CS2800 Postfix Calculator</name>
 	<description>A maven project for me to practice and use tools and standerds in eclipse </description>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
