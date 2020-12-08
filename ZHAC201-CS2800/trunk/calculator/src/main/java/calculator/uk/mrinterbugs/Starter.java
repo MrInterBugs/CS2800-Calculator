@@ -1,7 +1,6 @@
 package calculator.uk.mrinterbugs;
 
 //https://github.com/jjenkov/javafx-examples Used to understand how to use JavaFX as i had issues with file locations on windows.
-import java.io.File;
 import java.net.URL;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -36,10 +35,8 @@ public class Starter extends Application {
     
     MyController controller = new MyController();
     loader.setController(controller);
-    File fxmlFile = new File("src/main/resources/fxml/CalcWindow.fxml");
-    URL fxmlUrl = fxmlFile.toURI().toURL();
+    URL fxmlUrl = this.getClass().getResource("/fxml/CalcWindow.fxml");
     loader.setLocation(fxmlUrl);
-
 
     VBox vbox = loader.<VBox>load();
 
