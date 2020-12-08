@@ -21,11 +21,11 @@ public class Version {
    */
   public static void display() {
     
-    String version = "0.1.0";
+    String version = "0.5.0";
     
-    Stage versionwindow = new Stage();
+    Stage versioning = new Stage();
 
-    versionwindow.setTitle("Version Info");
+    versioning.setTitle("Version Info");
 
     Label label0 = new Label("Postfix Calculator");
     Label label1 = new Label("Running version " + version);
@@ -35,8 +35,8 @@ public class Version {
     layout.getChildren().addAll(label0, label1, label2, label3);
 
     Scene scene1 = new Scene(layout, 150, 67);
-    versionwindow.setScene(scene1);
-    versionwindow.showAndWait();
+    versioning.setScene(scene1);
+    versioning.showAndWait();
 
   }
 

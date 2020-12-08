@@ -11,7 +11,7 @@ public class Entry {
   private float number;
   private Symbol other;
   private String str;
-  private Type type;
+  private final Type type;
 
   /**
    * This constructor is used to create an entry of type float.

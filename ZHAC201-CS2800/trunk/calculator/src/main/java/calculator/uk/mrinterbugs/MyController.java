@@ -21,10 +21,10 @@ public class MyController {
   @FXML // URL location of the FXML file that was given to the FXMLLoader.
   private URL location;
 
-  @FXML // The textfield used to get an input.
+  @FXML // The text field used to get an input.
   private TextField textfield;
 
-  @FXML // The checkbox used to select which calculation mehthod to use.
+  @FXML // The checkbox used to select which calculation method to use.
   private CheckBox infix;
 
   @FXML // Tells the user which version of the program is being used.

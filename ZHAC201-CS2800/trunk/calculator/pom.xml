@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>uk.mrinterbugs</groupId>
 	<artifactId>calculator</artifactId>
-	<version>0.1.0</version>
+	<version>0.5.0</version>
 	<name>The CS2800 Postfix Calculator</name>
 	<description>A maven project for me to practice and use tools and standerds in eclipse </description>
 	<properties>

@@ -11,11 +11,11 @@ public interface Calculator {
   /**
    * Used to make sure each calculator returns the same format of answer.
    * 
-   * @param arguements get the answer to the user inputed question.
+   * @param arguments get the answer to the user inputted question.
    * @return the correct answer.
-   * @throws UserInput If the userinput is not valid throw and exception.
+   * @throws UserInput If the user input is not valid throw and exception.
    */
-  static float evaluate(String arguements) throws UserInput {
+  static float evaluate(String arguments) throws UserInput {
     return 0;
   }
 }

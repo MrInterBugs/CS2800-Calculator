@@ -8,19 +8,19 @@ package calculator.uk.mrinterbugs;
  */
 public enum Symbol {
 
-  PLUS("+"), MINUS("-"), LEFT_BRACKET("("), RIGHT_BRACKET(")"), TIMES("*"), DIVIDE("/"), INVAILD(
-      "!");
+  PLUS("+"), MINUS("-"), LEFT_BRACKET("("), RIGHT_BRACKET(")"), TIMES("*"), DIVIDE("/"), POWER(
+      "^"), INVALID("!");
 
   /**
    * A private constructor used for creating the enums which can be seen above.
    * 
-   * @param string Takes a string input for the symbol that each enum represents.
+   * @param symbol Takes a string input for the symbol that each enum represents.
    */
-  private Symbol(String symbol) {
+  Symbol(String symbol) {
     this.symbol = symbol;
   }
 
-  private String symbol;
+  private final String symbol;
 
   /**
    * Used to return the symbol that relates to each of the enums.

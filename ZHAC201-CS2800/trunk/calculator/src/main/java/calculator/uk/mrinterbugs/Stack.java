@@ -9,7 +9,7 @@ package calculator.uk.mrinterbugs;
 public class Stack {
 
   private int size;
-  private Entry[] stack = new Entry[1000];
+  private final Entry[] stack = new Entry[1000];
 
   /**
    * Used to get the size of the full stack.
