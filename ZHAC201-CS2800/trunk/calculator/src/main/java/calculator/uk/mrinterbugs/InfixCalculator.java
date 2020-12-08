@@ -69,7 +69,13 @@ public class InfixCalculator implements Calculator {
     return 0;
   }
 
-  private static boolean isSymbol(String c) {
+  /**
+   * Tests to see if an string is a symbol.
+   * 
+   * @param c The string to be tested.
+   * @return true or false weather or not it is a symbol.
+   */
+  public static boolean isSymbol(String c) {
     return c.equals(Symbol.PLUS.getSymbol()) || c.equals(Symbol.MINUS.getSymbol())
             || c.equals(Symbol.DIVIDE.getSymbol()) || c.equals(Symbol.TIMES.getSymbol())
             || c.equals(Symbol.POWER.getSymbol());
