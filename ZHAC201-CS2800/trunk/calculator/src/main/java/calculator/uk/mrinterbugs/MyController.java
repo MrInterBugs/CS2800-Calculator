@@ -39,18 +39,18 @@ public class MyController {
     if (infix.isSelected()) {
       try {
         result = InfixCalculator.evaluate(test);
+        textfield.setText(result.toString());
       } catch (UserInput | EmptyStack e) {
-        e.printStackTrace();
+        textfield.setText("Not a valid input.");
       }
     } else {
       try {
         result = PostfixCalculator.evaluate(test);
+        textfield.setText(result.toString());
       } catch (UserInput | EmptyStack e) {
-        e.printStackTrace();
+        textfield.setText("Not a valid input.");
       }
     }
-
-    textfield.setText(result.toString());
   }
 
   @FXML // This method is called by the FXMLLoader when initialisation is complete
